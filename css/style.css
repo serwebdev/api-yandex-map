@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.map-wrap {
+    max-width: 1000px;
+    height: 400px;
+    margin: 50px auto;
+    position: relative;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.control-map {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: transparent;
+}
+
+.control-map__item {
+    margin-bottom: 7px;
+    cursor: pointer;
+    position: relative;
+    height: 30px;
+
+}
+
+.control-map__item:last-child {
+    margin-bottom: 0;
+}
+
+.control-map__color {
+    width: 60px;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.control-map__color--1 {
+    background: #1e98ff;
+}
+
+.control-map__color--2 {
+    background: #56db40;
+}
+
+.control-map__color--3 {
+    background: #ed4543;
+}
+
+.control-map__color--4 {
+    background: #ffd21e;
+}
+
+.control-map__color--5 {
+    background: #f371d1;
+}
+
+.control-map__color--6 {
+    background: #ff931e;
+}
+
+.control-map__content {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    background: rgba(255, 255, 255, 0.85);
+    padding-right: 15px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    transition: .15s;
+}
+
+
+.control-map__content.show {
+    left: 30px;
+    gap: 15px;
+
+}
+
+.control-map__img-wrap {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-map__img {
+    width: 22px;
+    height: 22px;
+    opacity: 0.6;
+}
+
+.control-map__text {
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.control-map__item.active .control-map__img,
+.control-map__item.active .control-map__text {
+    opacity: 1;
+}
+
+@media(max-width: 600px) {
+    .control-map__color {
+        opacity: 0.3;
+    }
+
+    .control-map__item.active .control-map__color {
+        opacity: 1;
+    }
+
+    .control-map__content {
+        padding-right: 0px;
+    }
+
+
+    .control-map__text {
+        display: none;
+    }
+}
